@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Jost:wght@200 & family= Lobster & family= Poppins:wght@200 & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    scroll-behavior: smooth;
+}
+body{
+    background: #DEB3B3;
+    font-family: fantasy;
+    font-size: 14px;
+}
+
+.nav{
+    background: #b568c6;
+    height: 80px;
+    color: aquamarine;
+}
+.nav-conteiner{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.nav-menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+    
+}
+.nav-item{
+    color: aquamarine;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.nav-item::after{
+    content: "";
+    display: block;
+    background:rgba(214, 252, 254, 0.5);
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+.nav-item:hover{
+    --clippy:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.nav-imput:checked + .nav-menu{
+    background:linear-gradient(to top, rgb(43, 115, 156) 0%, rgb(224, 76, 190) 100%);
+}
+.nav-label, .nav-imput{
+    display: none;
+}
+
+@media (max-width:700px ) {
+	.nav-label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: #9f8ad0;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+    .nav-imput:checked + .nav-menu{
+        clip-path: circle(100% at center);
+
+   }
+}
+
+.cover{
+    height: 90vh;
+    color: rgb(52, 37, 37);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: linear-gradient(to top, rgba(168, 237, 233, 0.5) 0%, rgba(254, 214, 227, 0.5) 100%), url(./Img/ireland-rogers-0lRRUT1Z7Vk-unsplash.jpg)
+    
+}
+.cover-text{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 45px;
+    height: 50%;
+    flex-direction: column;
+
+
+}
+
+.cover-text1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20%;
+    font-size: 25px;
+    flex-direction: column;
+    
+}
+
+.boton{
+    text-decoration: none;
+    display: block;
+
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    padding-top: 1px;
+    margin: auto;
+
+    background-color: rgb(162, 112, 78);
+    color: rgb(11, 14, 14);
+    font-family:'Lobster', cursive;
+    font-size: 25px;
+    box-shadow: -3px 3px 10px #000;
+
+    transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 2s;
+    -moz-transition: 2s;
+    -moz-transition: 2s;
+    
+}
+
+.boton:hover{
+    background-color: #cba79c;
+    width: 30%;
+    transform: rotate(360deg);
+}
+
+.part2{
+    background-color: aliceblue;
+}
+
+.letra{
+    font-family:'Lobster', cursive;
+    font-size: 60px;
+    text-align: center;
+
+}
+
+.letra1{
+    text-align: center;
+    margin-right: 50px;
+    font-size: 25px;
+}
+
+.hero-conteiner{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+
+
+.imagen{
+    padding: 5%;
+    width: 300px;
+    height: 400px;
+    display: block;
+    margin: 40px;
+    box-shadow: 0 0 6px rgb(0, 0, 0, .5);
+}
+
+.imagen img{
+    width: 100%;
+    
+}
+
+.text-music{
+    padding: 5%;
+}
+
+.tipo-music{
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+}
+
+.part3{
+    background-color: #cba79c;
+}
+
+.title{
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    text-align: center;
+}
+
+.carrucel{
+    padding: 16px;
+}
+
+.grande {
+    width: 100%;
+    object-fit: cover;
+}
+
+.grande p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.music img{
+    width: calc(100% / 3);
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.music {
+    display: flex;
+    overflow-y: auto;
+}
+
+footer{
+    background-color: #9f8ad0;
+    padding-bottom: 0.1px;
+    font-family:'Jost', sans-serif;
+    padding: 5%;
+}
+
+.pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contacto{
+    width: 40%;
+    color: aliceblue;
+}
+
+.name{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.name+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    color: #ccc;
+}
+
+.social-media-icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.linea{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #ccc;
+    margin-bottom: 60px;
+}
